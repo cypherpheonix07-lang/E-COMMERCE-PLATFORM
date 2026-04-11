@@ -18,6 +18,8 @@ import WishlistPage from './pages/WishlistPage.jsx';
 import OrdersPage from './pages/OrdersPage.jsx';
 import ComparePage from './pages/ComparePage.jsx';
 import OmegaNexus from './pages/OmegaNexus.jsx';
+import QuantumPicks from './pages/QuantumPicks.jsx';
+import Profile from './pages/Profile.jsx';
 
 function App() {
   const location = useLocation();
@@ -67,10 +69,11 @@ function App() {
               <Route path="/explore" element={<ExplorePage />} />
               <Route path="/search" element={<SearchResults />} />
               <Route path="/cart" element={<CartPage />} />
-              <Route path="/wishlist" element={<WishlistPage />} />
               <Route path="/orders" element={<OrdersPage />} />
               <Route path="/compare" element={<ComparePage />} />
               <Route path="/nexus" element={<OmegaNexus />} />
+              <Route path="/recommendations" element={<QuantumPicks />} />
+              <Route path="/profile" element={<Profile />} />
               {/* Fallback */}
               <Route path="*" element={<HomePage />} />
             </Routes>
