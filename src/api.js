@@ -1,4 +1,5 @@
-import { products, user, orders } from './data.js';
+import { user, orders } from './data.js';
+import { products } from './data/products.js';
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

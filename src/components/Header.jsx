@@ -72,10 +72,16 @@ const Header = () => {
           </Link>
 
           {/* MAIN NAV */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <Link to="/explore" className="text-sm font-medium hover:text-primary transition-colors">Explore</Link>
-            <Link to="/recommendations" className="text-sm font-medium hover:text-primary transition-colors">Quantum Picks</Link>
-            <Link to="/nexus" className="text-sm font-medium hover:text-primary transition-colors">Omega Nexus</Link>
+          <nav className="hidden xl:flex flex-1 justify-center items-center gap-4 px-8 overflow-x-auto whitespace-nowrap py-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <Link to="/shop" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white hover:glow-primary transition-all">Shop</Link>
+            <Link to="/recommendations" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Picks</Link>
+            <Link to="/insights" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Insights</Link>
+            <Link to="/forge" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Forge</Link>
+            <Link to="/universe" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Universe</Link>
+            <Link to="/oracle" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Oracle</Link>
+            <Link to="/community" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Community</Link>
+            <Link to="/events" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Events</Link>
+            <Link to="/settings" className="text-xs font-bold uppercase tracking-wider text-white/70 hover:text-white transition-all">Settings</Link>
           </nav>
 
           {/* ACTIONS */}
@@ -164,9 +170,15 @@ const Header = () => {
             className="lg:hidden border-t border-white/5 glass overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
-              <Link to="/explore" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Explore</Link>
-              <Link to="/recommendations" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Quantum Picks</Link>
-              <Link to="/nexus" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Omega Nexus</Link>
+              <Link to="/shop" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
+              <Link to="/recommendations" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>AI Picks</Link>
+              <Link to="/insights" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Insights</Link>
+              <Link to="/forge" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Forge</Link>
+              <Link to="/universe" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Universe</Link>
+              <Link to="/oracle" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Oracle</Link>
+              <Link to="/community" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Community</Link>
+              <Link to="/events" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Events</Link>
+              <Link to="/settings" className="block text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Settings</Link>
               <div className="pt-4 border-t border-white/5">
                 <p className="text-xs text-muted-foreground uppercase mb-2">Switch Reality</p>
                 <div className="flex gap-4">

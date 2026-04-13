@@ -72,17 +72,11 @@ export const useShopStore = create(
         setTimeout(() => set({ isEvolving: false, evolutionProgress: 100 }), 3000);
       },
       
-   royaltyPoints: 1250,
-  neuralPulse: 0,
-  evolutionProgress: 15,
-  setRealityMode: (mode) => set({ realityMode: mode }),
-  setSentientDialogue: (text) => set({ sentientDialogue: text }),
-  setNeuralPulse: (val) => set({ neuralPulse: val }),
-  setEvolutionProgress: (val) => set({ evolutionProgress: val }),
-      
+      setSentientDialogue: (text) => set({ sentientDialogue: text }),
       setSentientMood: (mood) => set({ sentientMood: mood }),
-      
       toggleVoice: () => set((state) => ({ isVoiceActive: !state.isVoiceActive })),
+      setNeuralPulse: (val) => set({ neuralPulse: val }),
+      setEvolutionProgress: (val) => set({ evolutionProgress: val }),
       
       updateNeuralPulse: (val) => set({ neuralPulse: val }),
 

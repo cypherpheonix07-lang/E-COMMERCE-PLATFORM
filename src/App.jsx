@@ -12,6 +12,7 @@ import VoiceAssistant from './components/VoiceAssistant.jsx';
 // Pages
 import HomePage from './pages/Home.jsx';
 import ExplorePage from './pages/Explore.jsx';
+import ShopPage from './pages/Shop.jsx';
 import SearchResults from './pages/SearchResults.jsx';
 import CartPage from './pages/CartPage.jsx';
 import WishlistPage from './pages/WishlistPage.jsx';
@@ -20,6 +21,14 @@ import ComparePage from './pages/ComparePage.jsx';
 import OmegaNexus from './pages/OmegaNexus.jsx';
 import QuantumPicks from './pages/QuantumPicks.jsx';
 import Profile from './pages/Profile.jsx';
+import Insights from './pages/Insights.jsx';
+import Forge from './pages/Forge.jsx';
+import Universe from './pages/Universe.jsx';
+import Oracle from './pages/Oracle.jsx';
+import Community from './pages/Community.jsx';
+import Events from './pages/Events.jsx';
+import Settings from './pages/Settings.jsx';
+import ProductDetail from './pages/ProductDetail.jsx';
 
 function App() {
   const location = useLocation();
@@ -66,15 +75,26 @@ function App() {
           >
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />
-              <Route path="/explore" element={<ExplorePage />} />
-              <Route path="/search" element={<SearchResults />} />
+              <Route path="/shop" element={<ShopPage />} />
+              <Route path="/recommendations" element={<QuantumPicks />} />
+              <Route path="/wishlist" element={<WishlistPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/orders" element={<OrdersPage />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/insights" element={<Insights />} />
+              <Route path="/forge" element={<Forge />} />
+              <Route path="/universe" element={<Universe />} />
+              <Route path="/oracle" element={<Oracle />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
+              
+              {/* Legacy fallback bridges */}
+              <Route path="/explore" element={<ExplorePage />} />
+              <Route path="/search" element={<SearchResults />} />
               <Route path="/compare" element={<ComparePage />} />
               <Route path="/nexus" element={<OmegaNexus />} />
-              <Route path="/recommendations" element={<QuantumPicks />} />
-              <Route path="/profile" element={<Profile />} />
-              {/* Fallback */}
               <Route path="*" element={<HomePage />} />
             </Routes>
           </motion.div>
