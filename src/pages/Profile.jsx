@@ -7,7 +7,7 @@ import {
 } from 'recharts';
 import { 
   User, MapPin, Dna, ShieldCheck, Zap, Globe, Settings, CreditCard,
-  BarChart3, UserEdit, Hexagon
+  BarChart3, Edit, Hexagon
 } from 'lucide-react';
 import ProfileDataForm from '../components/ProfileDataForm';
 import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard';
@@ -33,7 +33,7 @@ const Profile = () => {
 
   const tabs = [
     { id: 'overview', label: 'Neural Overview', icon: Globe },
-    { id: 'data', label: 'My Profile Data', icon: UserEdit },
+    { id: 'data', label: 'My Profile Data', icon: Edit },
     { id: 'analytics', label: 'Advanced Analytics', icon: BarChart3 },
     { id: 'ascension', label: 'Avatar Ascension', icon: Hexagon },
   ];
