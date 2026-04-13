@@ -29,6 +29,10 @@ import Community from './pages/Community.jsx';
 import Events from './pages/Events.jsx';
 import Settings from './pages/Settings.jsx';
 import ProductDetail from './pages/ProductDetail.jsx';
+import PhysicalReality from './pages/reality/Physical.jsx';
+import MetaverseReality from './pages/reality/Metaverse.jsx';
+import HolographicReality from './pages/reality/Holographic.jsx';
+import NeuralReality from './pages/reality/Neural.jsx';
 
 function App() {
   const location = useLocation();
@@ -89,6 +93,13 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/product/:id" element={<ProductDetail />} />
+              
+              {/* Reality Mode Dedicated Pages */}
+              <Route path="/reality/physical" element={<PhysicalReality />} />
+              <Route path="/reality/metaverse" element={<MetaverseReality />} />
+              <Route path="/reality/holographic" element={<HolographicReality />} />
+              <Route path="/reality/neural" element={<NeuralReality />} />
+
               
               {/* Legacy fallback bridges */}
               <Route path="/explore" element={<ExplorePage />} />

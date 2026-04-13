@@ -21,6 +21,12 @@ const WishlistPage = () => {
   const { data } = useQuery({ queryKey: ['homeData'], queryFn: fetchHomeData });
   const { wishlist, addToCart, removeFromWishlist } = useShopStore();
 
+  // ✅ All hooks MUST be called before any early returns
+  const insights = useMemo(
+    () => data ? getWishlistInsights(wishlist, data.user, data.products) : [],
+    [wishlist, data]
+  );
+
   if (!data) return (
     <div className="pt-32 flex flex-col items-center justify-center min-h-[50vh]">
       <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
@@ -29,7 +35,6 @@ const WishlistPage = () => {
   );
 
   const wishlistProducts = data.products.filter(p => wishlist.includes(p.id));
-  const insights = useMemo(() => getWishlistInsights(wishlist, data.user, data.products), [wishlist, data]);
 
   if (wishlistProducts.length === 0) {
     return (

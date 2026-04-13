@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   ShoppingBag, 
   Search, 
@@ -22,6 +22,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   const { 
     cart, 
@@ -92,7 +93,7 @@ const Header = () => {
               {['physical', 'metaverse', 'holographic', 'neural'].map((mode) => (
                 <button
                   key={mode}
-                  onClick={() => setRealityMode(mode)}
+                  onClick={() => { setRealityMode(mode); navigate(`/reality/${mode}`); }}
                   className={`p-2 rounded-full transition-all duration-300 ${
                     realityMode === mode 
                       ? 'bg-primary text-primary-foreground neo-glow-primary scale-110' 
