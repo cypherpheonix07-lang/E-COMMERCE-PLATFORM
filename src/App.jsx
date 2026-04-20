@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     // Reality-based sentient greeting
     const greetings = {
-      physical: "Welcome back, Arun. I've optimized the local Chennai experience for you.",
+      physical: "Welcome back, Arun. I&apos;ve optimized the local Chennai experience for you.",
       metaverse: "Entering the Metaverse. Your personalized showroom is ready.",
       holographic: "Holographic modes initialized. Feel free to touch the projection.",
       neural: "Neural link established. Your thoughts are now our guidance."

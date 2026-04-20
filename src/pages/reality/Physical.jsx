@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, MapPin, Package, ShieldCheck, Truck, Clock, Star, Zap } from 'lucide-react';
+import { Globe, MapPin, Package, ShieldCheck, Truck } from 'lucide-react';
 import { useShopStore } from '../../store';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ export default function PhysicalReality() {
 
   React.useEffect(() => {
     setRealityMode('physical');
-  }, []);
+  }, [setRealityMode]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -105,7 +105,7 @@ export default function PhysicalReality() {
         <div className="glass border border-emerald-500/20 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 bg-emerald-500/5">
           <MapPin className="w-16 h-16 text-emerald-400 shrink-0" />
           <div>
-            <h3 className="text-2xl font-black text-white mb-2">You're in Chennai, Tamil Nadu</h3>
+            <h3 className="text-2xl font-black text-white mb-2">You&apos;re in Chennai, Tamil Nadu</h3>
             <p className="text-white/50 mb-4">Physical delivery is active for your location. 14 nearby pickup nodes detected.</p>
             <div className="flex gap-2 flex-wrap">
               {['Anna Nagar', 'T-Nagar', 'Velachery', 'Adyar', 'Guindy'].map(area => (

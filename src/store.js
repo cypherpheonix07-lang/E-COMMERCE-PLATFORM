@@ -1,7 +1,7 @@
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { products, user as mockUser } from './data';
+import { user as mockUser } from './data';
 
 export const useShopStore = create(
   persist(
@@ -44,6 +44,12 @@ export const useShopStore = create(
       
       removeFromCart: (productId) => set((state) => ({
         cart: state.cart.filter(item => item.productId !== productId)
+      })),
+      
+      updateQuantity: (productId, quantity) => set((state) => ({
+        cart: state.cart.map(item => 
+          item.productId === productId ? { ...item, quantity } : item
+        )
       })),
       
       toggleWishlist: (productId) => set((state) => ({

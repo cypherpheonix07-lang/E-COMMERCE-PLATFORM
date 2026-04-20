@@ -13,7 +13,7 @@ const demos = [
 const features = [
   { icon: Eye, title: 'Volumetric Display', desc: 'See products as true 3D holograms floating in your actual space with depth and shadow.' },
   { icon: ScanLine, title: 'Surface Mapping', desc: 'AI detects your environment and places holograms with physically-accurate shadows.' },
-  { icon: Volume2, title: 'Sonic Halo', desc: 'Directional sound plays from the hologram's position in space.' },
+  { icon: Volume2, title: 'Sonic Halo', desc: "Directional sound plays from the hologram's position in space." },
   { icon: MonitorSmartphone, title: 'Any Device', desc: 'Works via camera on any modern phone, tablet, or AR-capable device.' },
 ];
 
@@ -22,7 +22,7 @@ export default function HolographicReality() {
 
   React.useEffect(() => {
     setRealityMode('holographic');
-  }, []);
+  }, [setRealityMode]);
 
   const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
   const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };

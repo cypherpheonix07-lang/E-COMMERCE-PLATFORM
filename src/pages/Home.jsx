@@ -56,7 +56,7 @@ const Home = () => {
           </h1>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            I've synchronized with your latest activity in <span className="text-foreground font-bold">Chennai</span>. 
+            I&apos;ve synchronized with your latest activity in <span className="text-foreground font-bold">Chennai</span>. 
             The store has evolved based on your passion for <span className="text-foreground font-bold">{user.preferences.categories[0]}</span>.
           </p>
 
